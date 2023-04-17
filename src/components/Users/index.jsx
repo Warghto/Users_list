@@ -33,7 +33,7 @@ export const Users = ({
             .filter((obj) => {
               const fullName = (obj.first_name + obj.last_name).toLowerCase();
               return (
-                fullName.includes(searchValue) ||
+                fullName.includes(searchValue.toLowerCase()) ||
                 obj.email.includes(searchValue)
               );
             })
